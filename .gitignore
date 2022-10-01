@@ -1,0 +1,6 @@
+tinyml_contest_data_training/
+tinyml_contest_data_training.zip
+*.txt
+stm32/
+__pycache__/
+*.npy
