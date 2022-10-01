@@ -31,11 +31,11 @@ def prepare_data(root_dir, indice_dir, size, mode):
 
 if __name__ == '__main__':
     argparser = argparse.ArgumentParser()
-    argparser.add_argument('--path_to_data', type=str, help='path to train dataset', default='tinyml_contest_data_training')
+    argparser.add_argument('--path_data', type=str, help='path to train dataset', default='tinyml_contest_data_training')
     argparser.add_argument('--path_indices', type=str, default='./data_indices')
     argparser.add_argument('--size', type=int, default=1250)
     args = argparser.parse_args()
-    path_to_data = args.path_to_data
+    path_to_data = args.path_data
     indice_dir = args.path_indices
     size = args.size
     prepare_data(path_to_data, indice_dir, size, mode='train')
