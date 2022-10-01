@@ -15,6 +15,7 @@ This code uses five main scripts, described below, to train and test your model 
 
 ##### Step1:Install the necessary tools. 
 It is strongly encouraged to use a virtual environment like *conda*. Miniconda can be installed from [here](https://docs.conda.io/en/latest/miniconda.html)
+
 Note: **Tensorflow 2.3** requires **python==3.7**
 
     conda create -n myenv python=3.7
@@ -36,7 +37,7 @@ Test the model with the following script.
     python test_tf.py --model_save_name=saved_models/trained_dscnn_ref
     
 
-**Note**: Due the non-determinism induced by the GPU, tensorflow and data generator during training the model accuracy varies on consecutive runs. `saved_modes/trained_dscnn_ref` is the best-performing model, with an accuracy of **0.9539%**. For more details on non-determinism in tensorflow, see [this](https://www.tensorflow.org/api_docs/python/tf/config/experimental/enable_op_determinism). It is encouraged to use this model for deployment.
+**Note**: Due the non-determinism induced by the GPU, tensorflow and data generator during training the model accuracy varies on consecutive runs. `saved_modes/trained_dscnn_ref` is the best-performing model, with an accuracy of **0.9539**. For more details on non-determinism in tensorflow, see [this](https://www.tensorflow.org/api_docs/python/tf/config/experimental/enable_op_determinism). It is encouraged to use this model for deployment.
 
 where `models` is a folder of model structure file, `saved_models` is a folder for saving your models, `data_indices` is a folder of data indices (the given training dataset has been partitioned into training and testing dataset, you can create more partitions of the training data locally for debugging and cross-validation), and `records` is a folder for saving the statistics outputs. The [TinyML Contest 2022 web-page](https://tinymlcontest.github.io/TinyML-Design-Contest/Problems.html) provides a description of the data files.
 

@@ -82,7 +82,7 @@ def main():
                 # the format of recv is ['<result>','<dutation>']
                 result = recv.split(',')[0]
                 inference_latency = recv.split(',')[1]
-                print(float(inference_latency) * 1000, inference_latency)
+                # print(float(inference_latency) * 1000, inference_latency)
                 if result == '0':
                     resultList.append('0')
                 else:
